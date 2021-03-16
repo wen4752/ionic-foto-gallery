@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>c14180217</ion-card-subtitle>
+      <ion-card-subtitle>C14180217</ion-card-subtitle>
       <ion-card-title>Lois Fernando</ion-card-title>
     </ion-card-header>
   
@@ -18,5 +18,20 @@
       and climb a mountain or spend a week in the woods. Wash your spirit clean.
     </ion-card-content>
   </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Game</ion-card-subtitle>
+      <ion-card-title>Tebak Angka 1-10</ion-card-title>
+    </ion-card-header>
   
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Masukkan Angka :</ion-label>
+        <ion-input type="number" [(ngModel)]="angka"></ion-input>
+      </ion-item>
+      <ion-button fill='outline' (click)="tebak()"  expand='block'><ion-icon name="caret-forward-outline"></ion-icon> Tebak</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <img src='../../assets/temp.jpg' *ngIf="angka==jawaban">
 </ion-content>
