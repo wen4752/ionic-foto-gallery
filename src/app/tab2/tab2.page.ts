@@ -10,6 +10,7 @@ export class Tab2Page {
   angka:Number
   jawaban:Number
   pesan:string
+  cek=false
   ngOnInit(){
     this.jawaban=Math.floor((Math.random()*10)+1)
     console.log(this.jawaban)
@@ -19,8 +20,10 @@ export class Tab2Page {
   tebak(){
     if(this.angka==this.jawaban){
       this.pesan='jawaban anda benar'
+      this.cek=true
     }else{
       this.pesan='jawaban anda salah'
+      this.cek=false
     }
     this.presentToast()
   }
